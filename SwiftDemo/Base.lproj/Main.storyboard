@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H9m-QT-Kgk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyq-VF-xpj">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8D-dI-ZFG">
+                                        <rect key="frame" x="155.5" y="0.0" width="64" height="40"/>
+                                        <state key="normal" image="tabbar_compose_icon_add" backgroundImage="tabbar_compose_button">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="popBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AhO-Pl-jtA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94700540239999997" green="1" blue="0.90695889009999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="h8D-dI-ZFG" firstAttribute="top" secondItem="pyq-VF-xpj" secondAttribute="top" id="2R7-ZM-Qeo"/>
+                                    <constraint firstItem="h8D-dI-ZFG" firstAttribute="centerX" secondItem="pyq-VF-xpj" secondAttribute="centerX" id="6Xd-7N-lyy"/>
+                                    <constraint firstAttribute="height" constant="40" id="VHF-6w-UhQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="h8D-dI-ZFG" secondAttribute="bottom" id="Yyx-xB-c9c"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pyq-VF-xpj" secondAttribute="trailing" id="1yz-2w-NuG"/>
+                            <constraint firstItem="pyq-VF-xpj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g2n-sU-Wg0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pyq-VF-xpj" secondAttribute="bottom" id="kHG-z1-JBm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0dw-PJ-Vm8"/>
+                    <connections>
+                        <outlet property="footView" destination="pyq-VF-xpj" id="uHx-Cm-ueM"/>
+                        <outlet property="popBtn" destination="h8D-dI-ZFG" id="GSI-72-MXA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="348" y="175.86206896551727"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hfs-9v-gJp">
+            <objects>
+                <navigationController id="H9m-QT-Kgk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UrI-hM-Y3d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6Wo-DE-4wa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="43t-et-9by" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-479" y="176"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabbar_compose_button" width="64" height="44"/>
+        <image name="tabbar_compose_icon_add" width="25" height="25"/>
+    </resources>
+</document>
